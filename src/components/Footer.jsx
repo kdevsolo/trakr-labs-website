@@ -1,18 +1,21 @@
+import { Link } from 'react-router-dom'
 import Logo from './Logo'
-import Socials from './Socials'
 
 const cols = [
   {
     title: 'Product',
-    links: ['Features', 'Insights', 'How it works', 'Pricing'],
-  },
-  {
-    title: 'Company',
-    links: ['About', 'Blog', 'Careers', 'Contact'],
+    links: [
+      { label: 'Features', href: '/#features' },
+      { label: 'Insights', href: '/#insights' },
+      { label: 'How it works', href: '/#how' },
+    ],
   },
   {
     title: 'Legal',
-    links: ['Privacy', 'Terms', 'Security'],
+    links: [
+      { label: 'Privacy', to: '/privacy' },
+      { label: 'Terms', to: '/terms' },
+    ],
   },
 ]
 
@@ -20,14 +23,15 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/5 px-4 py-14">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Logo />
+            <Link to="/" aria-label="Trakr home">
+              <Logo />
+            </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-500">
               Contextual feedback that works — capture, triage, and resolve
               without leaving your app.
             </p>
-            <Socials size={16} className="mt-5" />
           </div>
 
           {cols.map((col) => (
@@ -35,13 +39,22 @@ export default function Footer() {
               <h4 className="text-sm font-semibold text-white">{col.title}</h4>
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((l) => (
-                  <li key={l}>
-                    <a
-                      href="#"
-                      className="text-sm text-slate-500 transition-colors hover:text-slate-200"
-                    >
-                      {l}
-                    </a>
+                  <li key={l.label}>
+                    {'to' in l ? (
+                      <Link
+                        to={l.to}
+                        className="text-sm text-slate-500 transition-colors hover:text-slate-200"
+                      >
+                        {l.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={l.href}
+                        className="text-sm text-slate-500 transition-colors hover:text-slate-200"
+                      >
+                        {l.label}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

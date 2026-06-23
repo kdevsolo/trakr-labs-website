@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { Menu, X, ArrowRight } from 'lucide-react'
 import Logo from './Logo'
 
 const links = [
-  { label: 'Features', href: '#features' },
-  { label: 'Dashboard', href: '#dashboard' },
-  { label: 'Insights', href: '#insights' },
-  { label: 'Widget', href: '#widget' },
-  { label: 'How it works', href: '#how' },
-  { label: 'FAQ', href: '#faq' },
+  { label: 'Features', href: '/#features' },
+  { label: 'Dashboard', href: '/#dashboard' },
+  { label: 'Insights', href: '/#insights' },
+  { label: 'Widget', href: '/#widget' },
+  { label: 'How it works', href: '/#how' },
+  { label: 'FAQ', href: '/#faq' },
 ]
 
 export default function Navbar() {
@@ -35,9 +36,9 @@ export default function Navbar() {
           scrolled ? 'glass-strong shadow-xl shadow-black/30' : 'border border-transparent'
         }`}
       >
-        <a href="#top" aria-label="Trakr home">
+        <Link to="/" aria-label="Trakr home">
           <Logo />
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((l) => (
@@ -54,7 +55,7 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="#waitlist"
+            href="/#waitlist"
             className="group inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-ink-950 transition-transform hover:scale-[1.03] active:scale-95"
           >
             Join Waitlist
@@ -93,7 +94,7 @@ export default function Navbar() {
               ))}
               <li className="mt-1">
                 <a
-                  href="#waitlist"
+                  href="/#waitlist"
                   onClick={() => setOpen(false)}
                   className="block rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-ink-950"
                 >

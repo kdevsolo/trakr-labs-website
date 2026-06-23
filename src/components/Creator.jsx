@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Send, Check } from 'lucide-react'
 import Reveal from './Reveal'
-import Socials from './Socials'
 import { fadeUp, stagger, viewportOnce } from '../lib/motion'
 
 export default function Creator() {
@@ -34,7 +33,6 @@ export default function Creator() {
               and scalable frontend architectures.
             </p>
 
-            <Socials className="relative mt-7" />
           </div>
         </Reveal>
 

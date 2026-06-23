@@ -1,6 +1,6 @@
 export default function Privacy() {
   return (
-    <section className="relative px-4 py-24 pt-32">
+    <main className="relative px-4 py-24 pt-32">
       <div className="mx-auto max-w-3xl">
         <header className="mb-12">
           <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
@@ -324,6 +324,6 @@ export default function Privacy() {
           </section>
         </article>
       </div>
-    </section>
+    </main>
   )
 }
