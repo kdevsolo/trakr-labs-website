@@ -2,16 +2,9 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
 import { Menu, X, ArrowRight } from 'lucide-react'
-import Logo from './Logo'
-
-const links = [
-  { label: 'Features', href: '/#features' },
-  { label: 'Dashboard', href: '/#dashboard' },
-  { label: 'Insights', href: '/#insights' },
-  { label: 'Widget', href: '/#widget' },
-  { label: 'How it works', href: '/#how' },
-  { label: 'FAQ', href: '/#faq' },
-]
+import Logo from '../ui/Logo'
+import { navLinks } from '../../data/nav'
+import { SIGN_IN_URL, GET_STARTED_URL } from '../../config/site'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -41,7 +34,7 @@ export default function Navbar() {
         </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
-          {links.map((l) => (
+          {navLinks.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
@@ -53,12 +46,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-2 md:flex">
           <a
-            href="/#waitlist"
+            href={SIGN_IN_URL}
+            className="rounded-xl px-4 py-2 text-sm font-semibold text-slate-200 transition-colors hover:text-white"
+          >
+            Sign in
+          </a>
+          <a
+            href={GET_STARTED_URL}
             className="group inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-ink-950 transition-transform hover:scale-[1.03] active:scale-95"
           >
-            Join Waitlist
+            Get started
             <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
           </a>
         </div>
@@ -81,7 +80,7 @@ export default function Navbar() {
             className="glass-strong absolute inset-x-4 top-20 rounded-2xl p-3 md:hidden"
           >
             <ul className="flex flex-col">
-              {links.map((l) => (
+              {navLinks.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
@@ -94,11 +93,20 @@ export default function Navbar() {
               ))}
               <li className="mt-1">
                 <a
-                  href="/#waitlist"
+                  href={SIGN_IN_URL}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-xl px-4 py-3 text-center text-sm font-semibold text-slate-200 transition-colors hover:bg-white/5"
+                >
+                  Sign in
+                </a>
+              </li>
+              <li>
+                <a
+                  href={GET_STARTED_URL}
                   onClick={() => setOpen(false)}
                   className="block rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-ink-950"
                 >
-                  Join Waitlist
+                  Get started
                 </a>
               </li>
             </ul>

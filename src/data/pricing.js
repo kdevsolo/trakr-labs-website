@@ -1,0 +1,47 @@
+export const pricing = [
+  {
+    name: 'Free',
+    price: '$0',
+    cadence: '/mo',
+    description: 'For solo builders getting started with contextual feedback.',
+    features: [
+      '1 project',
+      '100 feedback reports / mo',
+      'Screen recording & screenshots',
+      'Community support',
+    ],
+    cta: 'Get started',
+    highlighted: false,
+  },
+  {
+    name: 'Pro',
+    price: '$29',
+    cadence: '/mo',
+    description: 'For growing teams that want AI triage and integrations.',
+    features: [
+      'Unlimited projects',
+      '5,000 reports / mo',
+      'AI triage & sentiment analysis',
+      'Kanban board & assignments',
+      'Jira & Linear integrations',
+      'Priority support',
+    ],
+    cta: 'Start free trial',
+    highlighted: true,
+  },
+  {
+    name: 'Team',
+    price: '$99',
+    cadence: '/mo',
+    description: 'For organizations that need scale, SSO, and SLAs.',
+    features: [
+      'Everything in Pro',
+      'Unlimited reports',
+      'SSO & advanced roles',
+      'SLA alerts & analytics',
+      'Dedicated success manager',
+    ],
+    cta: 'Contact sales',
+    highlighted: false,
+  },
+]

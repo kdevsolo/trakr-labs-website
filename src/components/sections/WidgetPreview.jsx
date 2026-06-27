@@ -6,8 +6,8 @@ import {
   Sparkles,
   Check,
 } from 'lucide-react'
-import { fadeUp, stagger, viewportOnce } from '../lib/motion'
-import Reveal from './Reveal'
+import { fadeUp, stagger, viewportOnce } from '../../lib/motion'
+import Reveal from '../ui/Reveal'
 
 const bullets = [
   { icon: Video, text: 'One-click screen recording, right inside your app' },

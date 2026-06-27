@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
-import SectionHeading from './SectionHeading'
-import { scaleIn, viewportOnce } from '../lib/motion'
+import SectionHeading from '../ui/SectionHeading'
+import { scaleIn, viewportOnce } from '../../lib/motion'
 
 export default function DashboardPreview() {
   return (

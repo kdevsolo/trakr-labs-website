@@ -1,23 +1,6 @@
 import { Link } from 'react-router-dom'
-import Logo from './Logo'
-
-const cols = [
-  {
-    title: 'Product',
-    links: [
-      { label: 'Features', href: '/#features' },
-      { label: 'Insights', href: '/#insights' },
-      { label: 'How it works', href: '/#how' },
-    ],
-  },
-  {
-    title: 'Legal',
-    links: [
-      { label: 'Privacy', to: '/privacy' },
-      { label: 'Terms', to: '/terms' },
-    ],
-  },
-]
+import Logo from '../ui/Logo'
+import { footerCols } from '../../data/nav'
 
 export default function Footer() {
   return (
@@ -34,7 +17,7 @@ export default function Footer() {
             </p>
           </div>
 
-          {cols.map((col) => (
+          {footerCols.map((col) => (
             <div key={col.title}>
               <h4 className="text-sm font-semibold text-white">{col.title}</h4>
               <ul className="mt-4 space-y-2.5">

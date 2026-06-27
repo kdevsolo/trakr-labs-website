@@ -1,10 +1,9 @@
 import { motion } from 'motion/react'
 import { Sparkles, Video, Camera, Bot, CircleDot } from 'lucide-react'
-import { fadeUp, stagger, viewportOnce } from '../lib/motion'
-import WaitlistForm from './WaitlistForm'
+import { fadeUp, stagger, viewportOnce } from '../../lib/motion'
+import AuthButtons from '../ui/AuthButtons'
 
 export default function Hero() {
-  console.log('Random number:', Math.random());
   return (
     <section id="top" className="relative px-4 pt-36 pb-20 sm:pt-40 lg:pt-44">
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
@@ -15,7 +14,7 @@ export default function Hero() {
             className="glass inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-xs font-medium text-slate-300"
           >
             <span className="flex h-1.5 w-1.5 rounded-full bg-accent-400 shadow-[0_0_10px_2px_rgba(45,212,191,0.7)]" />
-            Revolutionize your feedback workflow
+            The first of its kind &middot; AI-native contextual feedback
           </motion.div>
 
           <motion.h1
@@ -35,13 +34,8 @@ export default function Hero() {
             the loop from report to resolution.
           </motion.p>
 
-          <motion.div variants={fadeUp} className="mt-8 max-w-md">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold text-brand-300">
-              <Sparkles size={13} />
-              50% OFF Lifetime
-              <span className="font-normal text-slate-400">for early access members</span>
-            </div>
-            <WaitlistForm />
+          <motion.div variants={fadeUp} className="mt-8">
+            <AuthButtons size="lg" primaryLabel="Get started free" />
           </motion.div>
 
           <motion.div
@@ -49,10 +43,20 @@ export default function Hero() {
             className="mt-8 flex items-center gap-6 text-xs text-slate-500"
           >
             <span className="inline-flex items-center gap-2">
-              <CircleDot size={13} className="text-accent-400" /> Coming soon 🚀
+              <CircleDot size={13} className="text-accent-400" /> Free plan available
             </span>
             <span>No credit card required</span>
             <span>2-minute setup</span>
+          </motion.div>
+
+          <motion.div
+            variants={fadeUp}
+            className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-slate-400"
+          >
+            <span className="text-sm leading-none" aria-hidden>
+              🇮🇳
+            </span>
+            Proudly building from India, for the world
           </motion.div>
         </motion.div>
 

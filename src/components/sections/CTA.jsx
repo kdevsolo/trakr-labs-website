@@ -1,11 +1,11 @@
 import { motion } from 'motion/react'
 import { Sparkles } from 'lucide-react'
-import Reveal from './Reveal'
-import WaitlistForm from './WaitlistForm'
+import Reveal from '../ui/Reveal'
+import AuthButtons from '../ui/AuthButtons'
 
-export default function Waitlist() {
+export default function CTA() {
   return (
-    <section id="waitlist" className="relative px-4 py-24">
+    <section id="get-started" className="relative px-4 py-24">
       <Reveal className="mx-auto max-w-4xl">
         <div className="glass-strong relative overflow-hidden rounded-[2rem] px-6 py-14 text-center sm:px-12">
           {/* animated glow */}
@@ -18,18 +18,18 @@ export default function Waitlist() {
 
           <div className="relative">
             <span className="inline-flex items-center gap-2 rounded-full border border-brand-500/30 bg-brand-500/10 px-3 py-1 text-xs font-semibold text-brand-300">
-              <Sparkles size={13} /> Private beta · 50% OFF Lifetime
+              <Sparkles size={13} /> Start for free · No credit card required
             </span>
             <h2 className="font-display mx-auto mt-5 max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Be the first to fix feedback loops
+              Start shipping better feedback today
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-base text-slate-400">
-              Trakr is currently in private beta. Join the waitlist today to
-              secure your spot and get 50% off lifetime access when we launch.
+              Create your account in minutes and turn messy bug reports into
+              clear, contextual feedback your whole team can act on.
             </p>
 
-            <div className="mx-auto mt-8 max-w-md text-left">
-              <WaitlistForm />
+            <div className="mt-8 flex justify-center">
+              <AuthButtons size="lg" primaryLabel="Get started free" align="center" />
             </div>
           </div>
         </div>

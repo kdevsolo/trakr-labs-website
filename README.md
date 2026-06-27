@@ -7,10 +7,11 @@ Built with **React + Vite**, **Tailwind CSS v4**, **Motion** (Framer Motion), an
 ## Features
 
 - Animated aurora background with scroll parallax
-- Sticky glass navbar with mobile menu
+- Sticky glass navbar with mobile menu and Sign in / Get started actions
 - Hero with a floating, animated product preview
-- Feature cards, animated velocity chart, 3-step integration guide
-- Waitlist forms (hero + dedicated CTA), FAQ accordion, creator + contact sections
+- Trusted-by logo wall, feature cards, social-proof stats, animated velocity chart, 3-step integration guide
+- Testimonials, pricing tiers, FAQ accordion, and creator + contact sections
+- "Get started" / "Sign in" CTAs pointing to the live app dashboard
 - Fully responsive, dark theme, respects `prefers-reduced-motion`
 
 ## Getting started
@@ -26,27 +27,33 @@ npm run preview  # preview the production build
 
 ```
 src/
-  App.jsx                 # page composition
-  index.css               # design tokens, utilities, keyframes
-  lib/motion.js           # shared animation variants
+  App.jsx                  # routes
+  index.css                # design tokens, utilities, keyframes
+  config/site.js           # app/dashboard URLs (sign in, get started) + brand
+  lib/motion.js            # shared animation variants
+  data/                    # content for data-driven sections
+    nav.js                 # navbar + footer links
+    features.js, capabilities.js, clients.js, stats.js,
+    pricing.js, testimonials.js, faqs.js
+  pages/
+    HomePage.jsx           # section composition
+    Privacy.jsx, Terms.jsx
   components/
-    Background.jsx        # animated gradient/grid backdrop
-    Navbar.jsx            # sticky glass nav
-    Hero.jsx              # hero + animated product preview
-    Marquee.jsx           # scrolling feature pills
-    Features.jsx          # three core feature cards
-    Insights.jsx          # performance insights + chart
-    HowItWorks.jsx        # 3-step integration
-    Waitlist.jsx          # waitlist CTA
-    FAQ.jsx               # accordion
-    Creator.jsx           # founder bio + contact form
-    Footer.jsx
-    WaitlistForm.jsx      # reusable email capture
-    SectionHeading.jsx, Reveal.jsx, Logo.jsx, Socials.jsx
+    layout/                # Layout, Navbar, Footer, Background, ScrollToTop
+    ui/                    # SectionHeading, Reveal, Logo, Socials, AuthButtons
+    sections/              # Hero, TrustedBy, Marquee, Features, Stats,
+                           # DashboardPreview, Insights, WidgetPreview,
+                           # HowItWorks, Testimonials, Pricing, CTA, FAQ, Creator
 ```
 
-## Wiring up forms
+## Configuring the app / dashboard links
 
-The waitlist and contact forms currently simulate submission. Connect them to your
-backend or a provider (e.g. an API route, Formspree, Resend, or a waitlist service)
-inside `src/components/WaitlistForm.jsx` and `src/components/Creator.jsx`.
+The "Sign in" and "Get started" buttons point at your live app. Edit the single
+`src/config/site.js` file to set `APP_URL` (and, if needed, `SIGN_IN_URL` /
+`GET_STARTED_URL`) to your real dashboard and auth routes.
+
+## Wiring up the contact form
+
+The contact form in `src/components/sections/Creator.jsx` currently simulates
+submission. Connect it to your backend or a provider (e.g. an API route,
+Formspree, or Resend).

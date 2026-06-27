@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import { Gauge, TrendingUp, Users, Flame, BellRing } from 'lucide-react'
-import Reveal from './Reveal'
-import { fadeUp, stagger, viewportOnce } from '../lib/motion'
+import Reveal from '../ui/Reveal'
+import { fadeUp, stagger, viewportOnce } from '../../lib/motion'
 
 const days = [
   { d: 'Mon', v: 48 },

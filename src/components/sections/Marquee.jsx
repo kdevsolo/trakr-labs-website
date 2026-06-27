@@ -1,18 +1,7 @@
-import { Video, Camera, Bot, Gauge, KanbanSquare, Bell, Sparkles, ShieldCheck } from 'lucide-react'
-
-const items = [
-  { icon: Video, label: 'Screen Recording' },
-  { icon: Camera, label: 'Screenshots' },
-  { icon: Bot, label: 'AI Triage' },
-  { icon: Gauge, label: 'Velocity Reports' },
-  { icon: KanbanSquare, label: 'Kanban Board' },
-  { icon: Bell, label: 'SLA Alerts' },
-  { icon: Sparkles, label: 'Sentiment Analysis' },
-  { icon: ShieldCheck, label: 'Privacy First' },
-]
+import { capabilities } from '../../data/capabilities'
 
 export default function Marquee() {
-  const loop = [...items, ...items]
+  const loop = [...capabilities, ...capabilities]
   return (
     <section className="relative py-10">
       <div className="relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_12%,black_88%,transparent)]">

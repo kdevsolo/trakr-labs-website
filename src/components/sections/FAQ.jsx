@@ -1,31 +1,9 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { Plus } from 'lucide-react'
-import SectionHeading from './SectionHeading'
-import Reveal from './Reveal'
-
-const faqs = [
-  {
-    q: 'What exactly is Trakr?',
-    a: 'Trakr is a contextual feedback platform. It lets your users record their screen or capture screenshots directly inside your app, then routes everything into an AI-powered dashboard where your team can triage, assign, and resolve.',
-  },
-  {
-    q: 'Do I need to change my code to use it?',
-    a: 'No. Trakr installs with a single script tag — drop it into your HTML head or body and the feedback widget appears. It works with any web stack, no build steps or framework lock-in required.',
-  },
-  {
-    q: 'Does it slow down my website?',
-    a: 'Not noticeably. The widget loads asynchronously and is heavily optimized, so it stays out of your critical render path and has negligible impact on performance.',
-  },
-  {
-    q: 'Is there a free plan?',
-    a: 'We will offer a generous free tier at launch. Join the waitlist to lock in 50% off lifetime access as an early member.',
-  },
-  {
-    q: 'Can I integrate this with Jira or Linear?',
-    a: 'Yes — integrations with tools like Jira and Linear are on the roadmap, so triaged feedback can flow straight into your existing workflow.',
-  },
-]
+import SectionHeading from '../ui/SectionHeading'
+import Reveal from '../ui/Reveal'
+import { faqs } from '../../data/faqs'
 
 export default function FAQ() {
   const [open, setOpen] = useState(0)

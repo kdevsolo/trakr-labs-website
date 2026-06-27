@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { KeyRound, Code2, MessageSquareHeart, Copy, Check } from 'lucide-react'
-import SectionHeading from './SectionHeading'
-import { fadeUp, stagger, viewportOnce } from '../lib/motion'
+import SectionHeading from '../ui/SectionHeading'
+import { fadeUp, stagger, viewportOnce } from '../../lib/motion'
 
 export default function HowItWorks() {
   return (

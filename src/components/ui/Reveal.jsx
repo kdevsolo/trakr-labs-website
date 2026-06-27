@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { fadeUp, viewportOnce } from '../lib/motion'
+import { fadeUp, viewportOnce } from '../../lib/motion'
 
 export default function Reveal({
   children,
