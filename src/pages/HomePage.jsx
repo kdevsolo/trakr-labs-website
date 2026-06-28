@@ -20,17 +20,17 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      <TrustedBy />
+      {/* <TrustedBy /> */}
       <Marquee />
       <Features />
       <UseCases />
-      <Stats />
+      {/* <Stats /> */}
       <DashboardPreview />
-      <Demo />
+      {/* <Demo /> */}
       <Insights />
       <WidgetPreview />
       <HowItWorks />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Pricing />
       <Security />
       <CTA />

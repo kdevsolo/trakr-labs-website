@@ -26,12 +26,14 @@ export default function Insights() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2">
         {/* Copy */}
         <motion.div variants={stagger(0.1)} initial="hidden" whileInView="show" viewport={viewportOnce}>
-          <motion.span
-            variants={fadeUp}
-            className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-semibold tracking-wide text-accent-600 uppercase"
-          >
-            <Gauge size={13} /> Performance Insights
-          </motion.span>
+          <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-semibold tracking-wide text-accent-600 uppercase">
+              <Gauge size={13} /> Performance Insights
+            </span>
+            <span className="inline-flex items-center rounded-full border border-violet-200 bg-violet-50 px-3 py-1 text-xs font-semibold tracking-wide text-violet-600 uppercase">
+              Coming Soon
+            </span>
+          </motion.div>
           <motion.h2
             variants={fadeUp}
             className="font-display mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"

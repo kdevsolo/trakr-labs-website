@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
 import SectionHeading from '../ui/SectionHeading'
 import DotGridOverlay from '../ui/DotGridOverlay'
+import DashboardMockup from '../ui/DashboardMockup'
 import { scaleIn, viewportOnce } from '../../lib/motion'
 
 export default function DashboardPreview() {
@@ -23,14 +24,11 @@ export default function DashboardPreview() {
         >
           <div className="pointer-events-none absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-brand-100/60 via-violet-100/40 to-accent-100/50 blur-3xl" />
 
-          <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg ring-glow">
+          <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-[#f8fafc] shadow-lg ring-glow">
             <DotGridOverlay mask="wide" opacity="opacity-25" />
-            <img
-              src="/dashboard.png"
-              alt="Trakr dashboard showing feedback triage, stats, and AI-powered insights"
-              className="relative w-full"
-              loading="lazy"
-            />
+            <div className="pointer-events-none relative h-[420px] sm:h-[480px] lg:h-[560px]">
+              <DashboardMockup />
+            </div>
           </div>
         </motion.div>
       </div>
