@@ -26,14 +26,14 @@ export default function UseCases() {
               variants={fadeUp}
               whileHover={{ y: -6 }}
               transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-              className="group glass relative overflow-hidden rounded-3xl p-7"
+              className="group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-7 shadow-sm"
             >
-              <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-gradient-to-br from-brand-500/20 to-brand-500/0 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
-              <span className="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-brand-300">
+              <div className="pointer-events-none absolute -top-16 -right-16 h-48 w-48 rounded-full bg-gradient-to-br from-brand-500/10 to-brand-500/0 opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-100" />
+              <span className="relative flex h-12 w-12 items-center justify-center rounded-2xl border border-gray-200 bg-gray-50 text-brand-600">
                 <u.icon size={22} />
               </span>
-              <h3 className="font-display mt-5 text-lg font-semibold text-white">{u.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-400">{u.desc}</p>
+              <h3 className="font-display mt-5 text-lg font-semibold text-gray-900">{u.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">{u.desc}</p>
             </motion.div>
           ))}
         </motion.div>

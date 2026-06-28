@@ -3,17 +3,17 @@ export default function Privacy() {
     <main className="relative px-4 py-24 pt-32">
       <div className="mx-auto max-w-3xl">
         <header className="mb-12">
-          <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Trakr Labs Privacy Policy
           </h1>
-          <p className="mt-3 text-sm text-slate-500">
-            <span className="font-medium text-slate-400">Last Updated:</span> June 2026
+          <p className="mt-3 text-sm text-gray-500">
+            <span className="font-medium text-gray-600">Last Updated:</span> June 2026
           </p>
         </header>
 
-        <article className="space-y-12 text-slate-400">
+        <article className="space-y-12 text-gray-600">
           <section>
-            <h2 className="font-display mb-4 text-xl font-semibold text-white">Introduction</h2>
+            <h2 className="font-display mb-4 text-xl font-semibold text-gray-900">Introduction</h2>
             <div className="space-y-4 leading-relaxed">
               <p>
                 Trakr Labs (&quot;Trakr&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;)
@@ -31,16 +31,16 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-6 text-2xl font-bold text-white">
+            <h2 className="font-display mb-6 text-2xl font-bold text-gray-900">
               Information We Collect
             </h2>
 
             <div className="space-y-8">
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-white">Account Information</h3>
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">Account Information</h3>
                 <p className="mb-3 leading-relaxed">When you create an account, we may collect:</p>
                 <ul className="list-disc space-y-2 pl-5">
                   <li>Full name</li>
@@ -52,7 +52,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-white">Feedback Data</h3>
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">Feedback Data</h3>
                 <p className="mb-3 leading-relaxed">
                   When feedback is submitted through Trakr widgets, we may collect:
                 </p>
@@ -67,7 +67,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-white">Technical Metadata</h3>
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">Technical Metadata</h3>
                 <p className="mb-3 leading-relaxed">
                   To help diagnose issues and improve service quality, we may automatically
                   collect:
@@ -83,7 +83,7 @@ export default function Privacy() {
               </div>
 
               <div>
-                <h3 className="mb-3 text-lg font-semibold text-white">Payment Information</h3>
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">Payment Information</h3>
                 <div className="space-y-4 leading-relaxed">
                   <p>
                     Payments are processed by third-party payment providers such as Paddle or
@@ -95,10 +95,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               How We Use Information
             </h2>
             <p className="mb-3 leading-relaxed">We use collected information to:</p>
@@ -113,10 +113,10 @@ export default function Privacy() {
             </ul>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">AI Processing</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">AI Processing</h2>
             <div className="space-y-4 leading-relaxed">
               <p>
                 To provide AI-powered insights, portions of submitted feedback may be processed
@@ -136,10 +136,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Third-Party Service Providers
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -148,7 +148,7 @@ export default function Privacy() {
 
               <div className="space-y-6 pt-2">
                 <div>
-                  <h3 className="mb-2 font-semibold text-white">Infrastructure &amp; Hosting</h3>
+                  <h3 className="mb-2 font-semibold text-gray-900">Infrastructure &amp; Hosting</h3>
                   <ul className="list-disc space-y-2 pl-5">
                     <li>Supabase (database and authentication)</li>
                     <li>Supabase Storage (file storage)</li>
@@ -156,14 +156,14 @@ export default function Privacy() {
                 </div>
 
                 <div>
-                  <h3 className="mb-2 font-semibold text-white">AI Services</h3>
+                  <h3 className="mb-2 font-semibold text-gray-900">AI Services</h3>
                   <ul className="list-disc space-y-2 pl-5">
                     <li>Anthropic (Claude API)</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="mb-2 font-semibold text-white">Payment Processing</h3>
+                  <h3 className="mb-2 font-semibold text-gray-900">Payment Processing</h3>
                   <ul className="list-disc space-y-2 pl-5">
                     <li>Paddle</li>
                     <li>Lemon Squeezy</li>
@@ -178,10 +178,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Data Storage</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Data Storage</h2>
             <div className="space-y-4 leading-relaxed">
               <p>
                 Data is stored using secure cloud infrastructure operated by our service
@@ -199,10 +199,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Data Retention</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Data Retention</h2>
             <div className="space-y-4 leading-relaxed">
               <p>Unless otherwise required by law:</p>
               <ul className="list-disc space-y-2 pl-5">
@@ -219,10 +219,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Customer Responsibilities
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -239,10 +239,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Your Rights</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Your Rights</h2>
             <div className="space-y-4 leading-relaxed">
               <p>Depending on your jurisdiction, you may have rights to:</p>
               <ul className="list-disc space-y-2 pl-5">
@@ -257,10 +257,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Security</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Security</h2>
             <div className="space-y-4 leading-relaxed">
               <p>
                 We implement reasonable technical and organizational safeguards to protect
@@ -273,10 +273,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Children&apos;s Privacy
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -285,10 +285,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Changes to this Policy
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -301,10 +301,10 @@ export default function Privacy() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Contact Us</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Contact Us</h2>
             <div className="space-y-4 leading-relaxed">
               <p>For privacy-related questions, contact:</p>
               <p>

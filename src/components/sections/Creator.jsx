@@ -11,22 +11,22 @@ export default function Creator() {
         {/* Creator card */}
         <Reveal variants={fadeUp}>
           <div className="glass-strong relative h-full overflow-hidden rounded-3xl p-8">
-            <div className="pointer-events-none absolute -top-20 -left-16 h-56 w-56 rounded-full bg-violet-500/20 blur-3xl" />
-            <span className="relative inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs font-semibold tracking-wide text-violet-400 uppercase">
+            <div className="pointer-events-none absolute -top-20 -left-16 h-56 w-56 rounded-full bg-violet-100 blur-3xl" />
+            <span className="relative inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-semibold tracking-wide text-violet-600 uppercase">
               Meet the creator
             </span>
 
             <div className="relative mt-6 flex items-center gap-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-500 font-display text-2xl font-bold text-white shadow-lg shadow-brand-600/40">
+              <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-500 to-violet-500 font-display text-2xl font-bold text-white shadow-lg shadow-brand-600/20">
                 KS
               </div>
               <div>
-                <h3 className="font-display text-xl font-bold text-white">Keshav Saini</h3>
-                <p className="text-sm text-slate-400">Software Engineer & Founder</p>
+                <h3 className="font-display text-xl font-bold text-gray-900">Keshav Saini</h3>
+                <p className="text-sm text-gray-600">Software Engineer & Founder</p>
               </div>
             </div>
 
-            <p className="relative mt-6 text-sm leading-relaxed text-slate-400">
+            <p className="relative mt-6 text-sm leading-relaxed text-gray-600">
               Building tools that developers actually love to use. Trakr was born
               from the frustration of messy feedback loops and unclear bug
               reports. Passionate about crafting pixel-perfect user experiences
@@ -57,8 +57,8 @@ function ContactForm() {
 
   return (
     <div className="glass-strong h-full rounded-3xl p-8">
-      <h3 className="font-display text-xl font-bold text-white">Get in touch</h3>
-      <p className="mt-2 text-sm text-slate-400">
+      <h3 className="font-display text-xl font-bold text-gray-900">Get in touch</h3>
+      <p className="mt-2 text-sm text-gray-600">
         Have questions? We'd love to hear from you.
       </p>
 
@@ -75,18 +75,18 @@ function ContactForm() {
           <Field label="Email" name="email" type="email" placeholder="jane@company.com" />
         </motion.div>
         <motion.div variants={fadeUp}>
-          <label className="mb-1.5 block text-xs font-medium text-slate-400">Message</label>
+          <label className="mb-1.5 block text-xs font-medium text-gray-600">Message</label>
           <textarea
             required
             rows={4}
             placeholder="Tell us what's on your mind…"
-            className="w-full resize-none rounded-xl border border-white/10 bg-ink-900/60 px-4 py-3 text-sm text-white placeholder:text-slate-600 transition-colors focus:border-brand-500/50 focus:outline-none"
+            className="w-full resize-none rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
           />
         </motion.div>
         <motion.button
           variants={fadeUp}
           type="submit"
-          className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-brand-500 to-violet-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-600/30 transition-transform hover:scale-[1.01] active:scale-95"
+          className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-600/20 transition-transform hover:scale-[1.01] active:scale-95"
         >
           {sent ? (
             <>
@@ -107,13 +107,13 @@ function ContactForm() {
 function Field({ label, name, type = 'text', placeholder }) {
   return (
     <div>
-      <label className="mb-1.5 block text-xs font-medium text-slate-400">{label}</label>
+      <label className="mb-1.5 block text-xs font-medium text-gray-600">{label}</label>
       <input
         required
         type={type}
         name={name}
         placeholder={placeholder}
-        className="w-full rounded-xl border border-white/10 bg-ink-900/60 px-4 py-3 text-sm text-white placeholder:text-slate-600 transition-colors focus:border-brand-500/50 focus:outline-none"
+        className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 placeholder:text-gray-400 transition-colors focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
       />
     </div>
   )

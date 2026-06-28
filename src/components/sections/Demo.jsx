@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'motion/react'
 import { Play } from 'lucide-react'
 import SectionHeading from '../ui/SectionHeading'
+import DotGridOverlay from '../ui/DotGridOverlay'
 import { scaleIn, viewportOnce } from '../../lib/motion'
 import { DEMO_VIDEO_URL } from '../../config/site'
 
@@ -11,7 +12,8 @@ export default function Demo() {
 
   return (
     <section id="demo" className="relative px-4 py-24">
-      <div className="mx-auto max-w-5xl">
+      <DotGridOverlay mask="wide" opacity="opacity-35" />
+      <div className="relative mx-auto max-w-5xl">
         <SectionHeading
           eyebrow="Demo"
           title="See Trakr in action"
@@ -25,14 +27,15 @@ export default function Demo() {
           viewport={viewportOnce}
           className="relative mt-14"
         >
-          <div className="pointer-events-none absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-brand-500/20 via-violet-500/10 to-accent-500/20 blur-3xl" />
+          <div className="pointer-events-none absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-brand-100/60 via-violet-100/40 to-accent-100/50 blur-3xl" />
 
-          <div className="glass-strong relative aspect-video overflow-hidden rounded-3xl ring-glow">
+          <div className="relative aspect-video overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg ring-glow">
+            <DotGridOverlay mask="wide" opacity="opacity-20" />
             {playing && hasVideo ? (
               <iframe
                 src={`${DEMO_VIDEO_URL}${DEMO_VIDEO_URL.includes('?') ? '&' : '?'}autoplay=1`}
                 title="Trakr product demo"
-                className="h-full w-full"
+                className="relative h-full w-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
@@ -41,10 +44,10 @@ export default function Demo() {
                 <img
                   src="/dashboard.webp"
                   alt="Preview of the Trakr dashboard shown in the product demo"
-                  className="h-full w-full object-cover opacity-80"
+                  className="h-full w-full object-cover"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-gray-900/10 to-transparent" />
 
                 <button
                   type="button"
@@ -55,12 +58,12 @@ export default function Demo() {
                   <motion.span
                     whileHover={{ scale: 1.08 }}
                     whileTap={{ scale: 0.95 }}
-                    className="relative flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-brand-500 to-violet-500 text-white shadow-2xl shadow-brand-600/40"
+                    className="relative flex h-20 w-20 items-center justify-center rounded-full bg-brand-600 text-white shadow-2xl shadow-brand-600/30"
                   >
-                    <span className="absolute inset-0 animate-ping rounded-full bg-brand-500/40" />
+                    <span className="absolute inset-0 animate-ping rounded-full bg-brand-600/30" />
                     <Play size={28} className="relative ml-1" fill="currentColor" />
                   </motion.span>
-                  <span className="rounded-full bg-black/40 px-4 py-1.5 text-sm font-medium text-white backdrop-blur">
+                  <span className="rounded-full border border-gray-200 bg-white/90 px-4 py-1.5 text-sm font-medium text-gray-700 backdrop-blur">
                     {hasVideo ? 'Watch the 2-minute demo' : 'Full demo coming soon'}
                   </span>
                 </button>

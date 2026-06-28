@@ -1,11 +1,13 @@
 import { motion } from 'motion/react'
 import SectionHeading from '../ui/SectionHeading'
+import DotGridOverlay from '../ui/DotGridOverlay'
 import { scaleIn, viewportOnce } from '../../lib/motion'
 
 export default function DashboardPreview() {
   return (
     <section id="dashboard" className="relative px-4 py-24">
-      <div className="mx-auto max-w-6xl">
+      {/* <DotGridOverlay mask="wide" opacity="opacity-35" /> */}
+      <div className="relative mx-auto max-w-6xl">
         <SectionHeading
           eyebrow="Dashboard"
           title="A command center for every piece of feedback"
@@ -19,13 +21,14 @@ export default function DashboardPreview() {
           viewport={viewportOnce}
           className="relative mt-14"
         >
-          <div className="pointer-events-none absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-brand-500/20 via-violet-500/10 to-accent-500/20 blur-3xl" />
+          <div className="pointer-events-none absolute -inset-4 rounded-[2.5rem] bg-gradient-to-tr from-brand-100/60 via-violet-100/40 to-accent-100/50 blur-3xl" />
 
-          <div className="glass-strong relative overflow-hidden rounded-3xl ring-glow">
+          <div className="relative overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-lg ring-glow">
+            <DotGridOverlay mask="wide" opacity="opacity-25" />
             <img
-              src="/dashboard.webp"
+              src="/dashboard.png"
               alt="Trakr dashboard showing feedback triage, stats, and AI-powered insights"
-              className="w-full"
+              className="relative w-full"
               loading="lazy"
             />
           </div>

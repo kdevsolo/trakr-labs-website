@@ -4,14 +4,14 @@ import { clients } from '../../data/clients'
 
 export default function TrustedBy() {
   return (
-    <section className="relative px-4 py-12">
+    <section className="relative border-y border-gray-100 px-4 py-12">
       <div className="mx-auto max-w-6xl">
         <motion.p
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={viewportOnce}
-          className="text-center text-xs font-semibold tracking-[0.2em] text-slate-500 uppercase"
+          className="text-center text-xs font-semibold tracking-[0.2em] text-gray-500 uppercase"
         >
           Trusted by product teams at
         </motion.p>
@@ -27,7 +27,7 @@ export default function TrustedBy() {
             <motion.span
               key={c.name}
               variants={fadeUp}
-              className="font-display text-xl font-bold text-slate-500 grayscale transition-all duration-300 hover:text-slate-200 sm:text-2xl"
+              className="font-display text-xl font-bold text-gray-400 grayscale transition-all duration-300 hover:text-gray-600 sm:text-2xl"
             >
               {c.name}
             </motion.span>

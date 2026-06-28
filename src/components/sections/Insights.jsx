@@ -28,17 +28,17 @@ export default function Insights() {
         <motion.div variants={stagger(0.1)} initial="hidden" whileInView="show" viewport={viewportOnce}>
           <motion.span
             variants={fadeUp}
-            className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-xs font-semibold tracking-wide text-accent-400 uppercase"
+            className="inline-flex items-center gap-2 rounded-full border border-gray-200 bg-gray-50 px-3 py-1 text-xs font-semibold tracking-wide text-accent-600 uppercase"
           >
             <Gauge size={13} /> Performance Insights
           </motion.span>
           <motion.h2
             variants={fadeUp}
-            className="font-display mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            className="font-display mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
           >
             Track team velocity and resolution metrics
           </motion.h2>
-          <motion.p variants={fadeUp} className="mt-4 text-base leading-relaxed text-slate-400">
+          <motion.p variants={fadeUp} className="mt-4 text-base leading-relaxed text-gray-600">
             Get detailed reports on bug closure rates, team performance, and
             feedback trends over time. Make data-driven decisions to improve your
             product quality.
@@ -47,10 +47,10 @@ export default function Insights() {
           <motion.ul variants={stagger(0.08)} className="mt-7 space-y-3">
             {bullets.map((b) => (
               <motion.li key={b.text} variants={fadeUp} className="flex items-center gap-3">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent-500/15 text-accent-400">
+                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-accent-50 text-accent-600">
                   <b.icon size={15} />
                 </span>
-                <span className="text-sm text-slate-300">{b.text}</span>
+                <span className="text-sm text-gray-700">{b.text}</span>
               </motion.li>
             ))}
           </motion.ul>
@@ -61,12 +61,12 @@ export default function Insights() {
           <div className="glass-strong relative overflow-hidden rounded-3xl p-7">
             <div className="flex items-start justify-between">
               <div>
-                <p className="text-sm text-slate-400">Resolution velocity</p>
-                <p className="font-display mt-1 text-3xl font-bold text-white">
-                  124 <span className="text-base font-medium text-slate-500">closed</span>
+                <p className="text-sm text-gray-500">Resolution velocity</p>
+                <p className="font-display mt-1 text-3xl font-bold text-gray-900">
+                  124 <span className="text-base font-medium text-gray-500">closed</span>
                 </p>
               </div>
-              <span className="inline-flex items-center gap-1 rounded-full bg-accent-500/15 px-2.5 py-1 text-xs font-semibold text-accent-400">
+              <span className="inline-flex items-center gap-1 rounded-full bg-accent-50 px-2.5 py-1 text-xs font-semibold text-accent-600">
                 <TrendingUp size={13} /> +18.2%
               </span>
             </div>
@@ -83,12 +83,12 @@ export default function Insights() {
                       className="w-full max-w-[26px] rounded-t-lg bg-gradient-to-t from-brand-600 to-violet-400"
                     />
                   </div>
-                  <span className="text-[11px] text-slate-500">{day.d}</span>
+                  <span className="text-[11px] text-gray-500">{day.d}</span>
                 </div>
               ))}
             </div>
 
-            <div className="pointer-events-none absolute -bottom-20 -right-16 h-56 w-56 rounded-full bg-brand-500/20 blur-3xl" />
+            <div className="pointer-events-none absolute -bottom-20 -right-16 h-56 w-56 rounded-full bg-brand-100 blur-3xl" />
           </div>
         </Reveal>
       </div>

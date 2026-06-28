@@ -22,23 +22,21 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4"
+      className={`fixed inset-x-0 top-0 z-50 border-b bg-white/80 backdrop-blur-md transition-shadow duration-300 ${
+        scrolled ? 'border-gray-200 shadow-sm' : 'border-transparent'
+      }`}
     >
-      <nav
-        className={`flex w-full max-w-6xl items-center justify-between rounded-2xl px-4 py-3 transition-all duration-300 sm:px-5 ${
-          scrolled ? 'glass-strong shadow-xl shadow-black/30' : 'border border-transparent'
-        }`}
-      >
-        <Link to="/" aria-label="Trakr home">
+      <nav className="relative mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+        <Link to="/" aria-label="Trakr home" className="relative z-10 shrink-0">
           <Logo />
         </Link>
 
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex">
           {navLinks.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-lg px-3 py-2 text-sm text-slate-300 transition-colors hover:text-white"
+                className="rounded-lg px-3 py-2 text-sm text-gray-600 transition-colors hover:text-gray-900"
               >
                 {l.label}
               </a>
@@ -46,16 +44,16 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="relative z-10 hidden items-center gap-2 md:flex">
           <a
             href={SIGN_IN_URL}
-            className="rounded-xl px-4 py-2 text-sm font-semibold text-slate-200 transition-colors hover:text-white"
+            className="rounded-lg bg-gray-100 px-4 py-2 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-200"
           >
             Sign in
           </a>
           <a
             href={GET_STARTED_URL}
-            className="group inline-flex items-center gap-1.5 rounded-xl bg-white px-4 py-2 text-sm font-semibold text-ink-950 transition-transform hover:scale-[1.03] active:scale-95"
+            className="group inline-flex items-center gap-1.5 rounded-lg bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
           >
             Get started
             <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
@@ -64,7 +62,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 items-center justify-center rounded-lg text-slate-200 md:hidden"
+          className="relative z-10 flex h-9 w-9 items-center justify-center rounded-lg text-gray-700 md:hidden"
           aria-label="Toggle menu"
         >
           {open ? <X size={20} /> : <Menu size={20} />}
@@ -77,7 +75,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="glass-strong absolute inset-x-4 top-20 rounded-2xl p-3 md:hidden"
+            className="absolute inset-x-0 top-16 border-b border-gray-200 bg-white p-4 shadow-lg md:hidden"
           >
             <ul className="flex flex-col">
               {navLinks.map((l) => (
@@ -85,17 +83,17 @@ export default function Navbar() {
                   <a
                     href={l.href}
                     onClick={() => setOpen(false)}
-                    className="block rounded-xl px-4 py-3 text-sm text-slate-200 transition-colors hover:bg-white/5"
+                    className="block rounded-xl px-4 py-3 text-sm text-gray-700 transition-colors hover:bg-gray-50"
                   >
                     {l.label}
                   </a>
                 </li>
               ))}
-              <li className="mt-1">
+              <li className="mt-2 border-t border-gray-100 pt-2">
                 <a
                   href={SIGN_IN_URL}
                   onClick={() => setOpen(false)}
-                  className="block rounded-xl px-4 py-3 text-center text-sm font-semibold text-slate-200 transition-colors hover:bg-white/5"
+                  className="block rounded-xl px-4 py-3 text-center text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50"
                 >
                   Sign in
                 </a>
@@ -104,7 +102,7 @@ export default function Navbar() {
                 <a
                   href={GET_STARTED_URL}
                   onClick={() => setOpen(false)}
-                  className="block rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-ink-950"
+                  className="block rounded-xl bg-brand-600 px-4 py-3 text-center text-sm font-semibold text-white hover:bg-brand-700"
                 >
                   Get started
                 </a>

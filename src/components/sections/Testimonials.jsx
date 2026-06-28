@@ -27,8 +27,8 @@ export default function Testimonials() {
               variants={fadeUp}
               className="glass relative flex h-full flex-col rounded-3xl p-7"
             >
-              <Quote size={22} className="text-brand-400/60" />
-              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-slate-300">
+              <Quote size={22} className="text-brand-400" />
+              <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-gray-600">
                 {t.quote}
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-3">
@@ -36,8 +36,8 @@ export default function Testimonials() {
                   {t.initials}
                 </span>
                 <div>
-                  <p className="text-sm font-semibold text-white">{t.name}</p>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-sm font-semibold text-gray-900">{t.name}</p>
+                  <p className="text-xs text-gray-500">
                     {t.role} · {t.company}
                   </p>
                 </div>

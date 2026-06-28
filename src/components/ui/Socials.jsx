@@ -19,7 +19,7 @@ export default function Socials({ size = 17, className = '' }) {
           key={key}
           href="#"
           aria-label={key}
-          className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-300 transition-all hover:scale-105 hover:text-white"
+          className="flex h-10 w-10 items-center justify-center rounded-xl border border-gray-200 bg-white text-gray-600 transition-all hover:scale-105 hover:border-gray-300 hover:text-gray-900"
         >
           <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden>
             {icons[key]}

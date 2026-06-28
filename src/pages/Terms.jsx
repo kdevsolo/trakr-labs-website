@@ -3,17 +3,17 @@ export default function Terms() {
     <main className="relative px-4 py-24 pt-32">
       <div className="mx-auto max-w-3xl">
         <header className="mb-12">
-          <h1 className="font-display text-3xl font-bold tracking-tight text-white sm:text-4xl">
+          <h1 className="font-display text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Trakr Labs Terms of Service
           </h1>
-          <p className="mt-3 text-sm text-slate-500">
-            <span className="font-medium text-slate-400">Last Updated:</span> June 2026
+          <p className="mt-3 text-sm text-gray-500">
+            <span className="font-medium text-gray-600">Last Updated:</span> June 2026
           </p>
         </header>
 
-        <article className="space-y-12 text-slate-400">
+        <article className="space-y-12 text-gray-600">
           <section>
-            <h2 className="font-display mb-4 text-xl font-semibold text-white">
+            <h2 className="font-display mb-4 text-xl font-semibold text-gray-900">
               Acceptance of Terms
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -25,10 +25,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Service Description</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Service Description</h2>
             <div className="space-y-4 leading-relaxed">
               <p>
                 Trakr Labs provides software tools that enable businesses to collect, organize,
@@ -40,10 +40,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Account Registration
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -58,10 +58,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Customer Responsibilities
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -79,10 +79,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Acceptable Use</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Acceptable Use</h2>
             <div className="space-y-4 leading-relaxed">
               <p>You agree not to:</p>
               <ul className="list-disc space-y-2 pl-5">
@@ -97,10 +97,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Intellectual Property
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -112,10 +112,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">AI Features</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">AI Features</h2>
             <div className="space-y-4 leading-relaxed">
               <p>Certain platform features may utilize third-party AI services.</p>
               <p>
@@ -129,10 +129,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Subscription and Payments
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -145,10 +145,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Termination</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Termination</h2>
             <div className="space-y-4 leading-relaxed">
               <p>We may suspend or terminate accounts that:</p>
               <ul className="list-disc space-y-2 pl-5">
@@ -160,10 +160,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Disclaimer of Warranties
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -178,10 +178,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">
               Limitation of Liability
             </h2>
             <div className="space-y-4 leading-relaxed">
@@ -202,10 +202,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Indemnification</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Indemnification</h2>
             <div className="space-y-4 leading-relaxed">
               <p>
                 You agree to indemnify and hold harmless Trakr Labs from claims arising from:
@@ -218,10 +218,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Governing Law</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Governing Law</h2>
             <div className="space-y-4 leading-relaxed">
               <p>These Terms shall be governed by and interpreted under the laws of India.</p>
               <p>
@@ -231,10 +231,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Changes to Terms</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Changes to Terms</h2>
             <div className="space-y-4 leading-relaxed">
               <p>We may update these Terms periodically.</p>
               <p>
@@ -244,10 +244,10 @@ export default function Terms() {
             </div>
           </section>
 
-          <hr className="border-white/5" />
+          <hr className="border-gray-200" />
 
           <section>
-            <h2 className="font-display mb-4 text-2xl font-bold text-white">Contact</h2>
+            <h2 className="font-display mb-4 text-2xl font-bold text-gray-900">Contact</h2>
             <div className="space-y-4 leading-relaxed">
               <p>
                 <a

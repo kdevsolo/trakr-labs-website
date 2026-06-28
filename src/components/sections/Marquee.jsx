@@ -9,10 +9,10 @@ export default function Marquee() {
           {loop.map((item, i) => (
             <div
               key={i}
-              className="flex shrink-0 items-center gap-2.5 rounded-full border border-white/8 bg-white/[0.02] px-5 py-2.5"
+              className="flex shrink-0 items-center gap-2.5 rounded-full border border-gray-200 bg-white px-5 py-2.5 shadow-sm"
             >
-              <item.icon size={16} className="text-brand-300" />
-              <span className="text-sm whitespace-nowrap text-slate-400">{item.label}</span>
+              <item.icon size={16} className="text-brand-600" />
+              <span className="text-sm whitespace-nowrap text-gray-600">{item.label}</span>
             </div>
           ))}
         </div>

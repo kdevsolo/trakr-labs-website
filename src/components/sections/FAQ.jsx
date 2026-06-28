@@ -24,19 +24,19 @@ export default function FAQ() {
               <Reveal key={item.q}>
                 <div
                   className={`glass overflow-hidden rounded-2xl transition-colors ${
-                    isOpen ? 'border-brand-500/30' : ''
+                    isOpen ? 'border-brand-200 bg-brand-50/30' : ''
                   }`}
                 >
                   <button
                     onClick={() => setOpen(isOpen ? -1 : i)}
                     className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
                   >
-                    <span className="font-medium text-white">{item.q}</span>
+                    <span className="font-medium text-gray-900">{item.q}</span>
                     <motion.span
                       animate={{ rotate: isOpen ? 45 : 0 }}
                       transition={{ duration: 0.25 }}
                       className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-lg ${
-                        isOpen ? 'bg-brand-500/20 text-brand-300' : 'bg-white/5 text-slate-400'
+                        isOpen ? 'bg-brand-50 text-brand-600' : 'bg-gray-100 text-gray-500'
                       }`}
                     >
                       <Plus size={16} />
@@ -50,7 +50,7 @@ export default function FAQ() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                       >
-                        <p className="px-5 pb-5 text-sm leading-relaxed text-slate-400">
+                        <p className="px-5 pb-5 text-sm leading-relaxed text-gray-600">
                           {item.a}
                         </p>
                       </motion.div>
